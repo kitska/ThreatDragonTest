@@ -687,7 +687,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -708,13 +709,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "343d12b5-bdee-4794-a65e-cdb1b104b401",
+                  "title": "Відмова в обслуговуванні під час Чорної П'ятниці",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Під час пікових навантажень, таких як Чорна П'ятниця, різке зростання кількості одночасних запитів до системи може призвести до вичерпання ресурсів сервера (CPU, пам'ять, з'єднання з БД), що спричинить уповільнення або повну недоступність сервісу для легітимних користувачів. Ситуація може бути посилена зловмисною атакою (наприклад, DDoS), яка маскується під природний сплеск трафіку.",
+                  "mitigation": "Забезпечити горизонтальне масштабування (autoscaling) та балансування навантаження перед періодами очікуваного піку. Впровадити rate limiting та захист від DDoS (наприклад, через CDN/WAF), кешування статичного контенту, а також провести навантажувальне тестування системи заздалегідь. Налаштувати моніторинг та алертинг для швидкого реагування на аномальне зростання трафіку.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "1228"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "Payment API Call"
@@ -727,7 +747,8 @@
             "target": {
               "cell": "a0b9d82b-f491-40bf-b993-e2ea9ca1b957",
               "port": "21516930-6e21-4a26-8b97-9bd3f27402bd"
-            }
+            },
+            "vertices": []
           },
           {
             "shape": "trust-boundary-curve",
@@ -764,6 +785,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 3
+    "threatTop": 4
   }
 }
