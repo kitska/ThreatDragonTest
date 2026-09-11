@@ -40,6 +40,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -123,7 +124,6 @@
               ]
             },
             "id": "8ae9983e-c285-4d19-9b13-428a1dd1e34c",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Customer",
@@ -157,6 +157,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -240,7 +241,6 @@
               ]
             },
             "id": "7ca5ba42-ebfa-48d3-91da-f70012e1a2da",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Web application",
@@ -280,6 +280,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -363,7 +364,6 @@
               ]
             },
             "id": "e0322b23-dd23-4439-b8e0-4b8a21c4a60c",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "Database",
@@ -382,8 +382,8 @@
           },
           {
             "position": {
-              "x": 984,
-              "y": 420
+              "x": 1414,
+              "y": 240
             },
             "size": {
               "width": 112.5,
@@ -401,6 +401,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -484,7 +485,6 @@
               ]
             },
             "id": "a0b9d82b-f491-40bf-b993-e2ea9ca1b957",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
               "name": "Payment Gateway",
@@ -564,7 +564,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "SQL Queries / User Data",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -578,7 +578,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "SQL Queries / User Data"
             ],
             "id": "47678233-29f4-4cf2-a3be-bda8da88f5ed",
             "source": {
@@ -610,7 +610,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Payment API Call",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -624,7 +624,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Payment API Call"
             ],
             "id": "e95b26ef-9c2c-457d-ada9-ddbfc2f085e7",
             "source": {
